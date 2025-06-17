@@ -42,8 +42,9 @@ const loginUser = async (req, res) => {
 
       res.json({ token });
     }else{
-      const rollNumberPattern = /^[0-9]{2}A51A[0-9]{2}[0-9A-Z]{2}$/; 
-      if (!rollNumberPattern.test(userId)){
+      const rollNumberPattern = /^[0-9]{2}[A-Z]51[A-Z][0-9]{2}[0-9A-Z]{2}$/i;
+      const facultyPattern = /^A5[A-Za-z]{3}00T[0-9]{2}$/i; 
+      if (!rollNumberPattern.test(userId) && !facultyPattern.test(userId)){
         return res.status(400).json({message:"Student ID not matched.."})
       }
       const token = jwt.sign({ userId, "role": "student","dept":"" }, process.env.JWT_SECRET, { expiresIn: "1h" });

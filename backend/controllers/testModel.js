@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // Connect to MongoDB (Change the connection string if using Atlas)
-mongoose.connect("mongodb+srv://madhukorada23:Madhu@cluster0.omsbh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+mongoose.connect("mongodb+srv://bharathkurasa:bharath@cluster0.luxbh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log("MongoDB Connected"))
@@ -15,8 +15,8 @@ const testUserModel = async () => {
     try {
         // Create a test user
         const newUser = new User({
-            userId: "22A51A05F5",
-            password: "Madhu5F5",
+            userId: "22A51A05F7",
+            password: "bharath5f7",
             role: "super_admin" // Change this to "super_admin" or "user" to test
         });
 
