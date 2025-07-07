@@ -17,7 +17,7 @@ const DaySchema = new mongoose.Schema({
 
 // Timetable Schema (for one room)
 const RoomTimetableSchema = new mongoose.Schema({
-  roomName: { type: String, required: true },       // Room101, Room102, etc.
+  className: { type: String, required: true },       // Room101, Room102, etc.
   timetableData: [DaySchema]                        // Weekly timetable for the room
 });
 
@@ -28,5 +28,3 @@ const BlockSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 module.exports = mongoose.model('BlockTimetable', BlockSchema);
-
-
