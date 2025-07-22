@@ -159,4 +159,17 @@ const getAllTimetables = async (req, res) => {
   }
 };
 
-module.exports = { uploadTimetableFromExcel,getTimetables,deleteTimetable,getAllTimetables};
+const deleteblockTimetable = async(req,res)=>{
+  try{
+    const {blockName} = req.params
+    const response = await Timetable.deleteOne({blockName})
+    if(!res) 
+      return res.status(400).json({ message: 'check the user details..' });
+
+    return res.status(200).json(response);
+  }catch(err){
+    res.status(500).json({ message: err.message });
+  }
+}
+
+module.exports = { uploadTimetableFromExcel,getTimetables,deleteTimetable,getAllTimetables,deleteblockTimetable};
