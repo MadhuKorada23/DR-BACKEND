@@ -1,7 +1,7 @@
 // routes/globalNotice.js
 const express = require("express");
 const router = express.Router();
-const noticeBoard = require("../controllers/globalNotice")
+const noticeBoard = require("../controllers/globalNoticeController")
 
 router.post("/create",  noticeBoard.createGlobalNotice);
 router.get("/getAll", noticeBoard.getGlobalNotices);

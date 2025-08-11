@@ -7,4 +7,5 @@ const globalNoticeSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model("globalNotice", globalNoticeSchema);
+  module.exports = mongoose.model("globalNotice", globalNoticeSchema);
+  
