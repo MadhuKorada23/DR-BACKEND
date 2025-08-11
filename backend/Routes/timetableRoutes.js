@@ -9,7 +9,7 @@ const { uploadTimetableFromExcel,getTimetables,pauseActivity,deleteTimetable,get
 
 router.post('/upload', upload.single('file'), uploadTimetableFromExcel);
 router.get("/blockTimetables/:blockName",getTimetables);
-// router.get("/fetchBlocksTimetables",getAllTimetables);
+router.get("/fetchBlocksTimetables",getAllTimetables);
 router.patch("/pauseActivity/:blockName/:className",pauseActivity)
 router.patch("/delete/:blockName/:className",deleteTimetable)
 router.delete("/delete/:blockName",deleteblockTimetable)
