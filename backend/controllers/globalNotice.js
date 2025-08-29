@@ -1,5 +1,5 @@
 // controllers/globalNoticeController.js
-const GlobalNotice = require("../models/GlobalNotice");
+const GlobalNotice = require("../models/globalNotice");
 
 const createGlobalNotice = async (req, res) => {
   try {
