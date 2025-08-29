@@ -18,8 +18,6 @@ const convertExcelTimeToHHMM = (excelTime) => {
 };
 
 
-
-
 const processTimetableData = (sheetData) => {
   const requiredFields = ['Day', 'PeriodNumber', 'StartTime', 'EndTime', 'Subject', 'Faculty'];
   const days = {};
